@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Multiplication Table</h3>
+
+<input type="number" id="n" value=" ">
+<button onclick="table()">Generate Table</button>
+
+<pre id="res"></pre>
+
+<script>
+function table() {
+  let n = document.getElementById("n").value;
+  let t = "Multiplication Table for " + n + ":\n\n";
+
+  if (n == "") {
+    alert("Enter a number");
+    return;
+  }
+
+  for (let i = 1; i <= 10; i++)
+    t += n + " x " + i + " = " + (n * i) + "\n";
+
+  document.getElementById("res").textContent = t;
+}
+</script>
+
+</body>
+</html>
